@@ -32,7 +32,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('FLASK_KEY')
 
 # CONNECT TO DB
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_URI", "sqlite:///posts.db")
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("postgresql://blog_postgresql_o7oh_user:V5E1iSaDPlNU4enHX75LchumMUwmzRHa@dpg-d3rjcm9r0fns73dmumog-a/blog_postgresql_o7oh", "sqlite:///posts.db")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False  # optional but recommended
 
 ckeditor = CKEditor(app)
